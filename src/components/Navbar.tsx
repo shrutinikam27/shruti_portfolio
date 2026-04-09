@@ -18,16 +18,16 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between h-20">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex-shrink-0"
           >
             <a href="#" className="text-3xl font-bold text-foreground hover:text-primary transition-colors">
-              Portfolio.
+              Shruti Nikam
             </a>
           </motion.div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-12">
               {navLinks.map((link, index) => (
@@ -45,7 +45,7 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -59,7 +59,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           className="md:hidden bg-background border-t border-white/10"

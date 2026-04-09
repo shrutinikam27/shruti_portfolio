@@ -3,27 +3,27 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Timesheet Management",
-    description: "A full-stack MERN application for managing employee timesheets, allowing for easy tracking and reporting.",
-    image: "https://picsum.photos/seed/timesheet/800/600",
-    tags: ["MERN Stack", "React", "Node.js", "MongoDB"],
-    github: "https://github.com/ShrutiNnikam/Timesheet-Management-System",
-    demo: "https://timesheet-management-system-qs1o.vercel.app/",
+    title: "StreetVend",
+    description: "An innovative platform for street vendors to manage suppliers, track product inventory, and streamline business operations.",
+    image: "/streetvendor.png",
+    tags: ["React", "Node.js", "MongoDB", "Tailwind"],
+    github: "https://github.com/shrutinikam27/streetvend",
+    demo: "https://streetvend-web.vercel.app/",
   },
   {
-    title: "Java Banking System",
-    description: "A robust backend system for financial transactions using Java and OOPs principles.",
-    image: "https://picsum.photos/seed/bank/800/600",
-    tags: ["Java", "OOPs", "SQL", "DBMS"],
-    github: "https://github.com/shrutinikam27",
+    title: "Gemzi Jewellery App",
+    description: "A premium Flutter application for jewellery marketing and gold saving schemes, featuring secure payments and interactive catalogs.",
+    image: "/gemzi.png",
+    tags: ["Flutter", "Dart", "Firebase", "Mobile App"],
+    github: "https://github.com/shrutinikam27/gemzi-flutter-app",
     demo: "#",
   },
   {
-    title: "Flutter Fitness App",
-    description: "A sleek cross-platform mobile application for tracking workouts and health metrics.",
-    image: "https://picsum.photos/seed/fitness/800/600",
-    tags: ["Flutter", "Dart", "Firebase"],
-    github: "https://github.com/shrutinikam27",
+    title: "SnipApp",
+    description: "A productivity tool for developers to save, organize, and quickly access reusable code snippets with syntax highlighting.",
+    image: "/snipapp.png",
+    tags: ["React", "TypeScript", "Tailwind"],
+    github: "https://github.com/shrutinikam27/snipapp",
     demo: "#",
   },
 ];
@@ -94,12 +94,26 @@ export default function Projects() {
                   {project.description}
                 </p>
                 <div className="flex gap-4">
-                  <a href={project.github} className="p-3 rounded-xl bg-background border border-white/10 hover:border-primary/50 text-foreground transition-all">
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="p-3 rounded-xl bg-background border border-white/10 hover:border-primary/50 text-foreground transition-all"
+                    title="View GitHub Repository"
+                  >
                     <Github className="h-6 w-6" />
                   </a>
-                  <a href={project.demo} className="p-3 rounded-xl bg-background border border-white/10 hover:border-primary/50 text-foreground transition-all">
-                    <ExternalLink className="h-6 w-6" />
-                  </a>
+                  {project.demo !== "#" && (
+                    <a 
+                      href={project.demo} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="p-3 rounded-xl bg-background border border-white/10 hover:border-primary/50 text-foreground transition-all"
+                      title="View Live Demo"
+                    >
+                      <ExternalLink className="h-6 w-6" />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
