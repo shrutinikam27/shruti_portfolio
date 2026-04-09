@@ -7,13 +7,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
             <a href="#" className="text-3xl font-bold text-foreground hover:text-primary transition-colors">
-              Portfolio.
+              Shruti Nikam
             </a>
             <p className="mt-4 text-foreground/50 max-w-xs text-lg">
               Designing and developing beautiful, functional digital experiences that stand out.
             </p>
           </div>
-          
+
           <div className="flex gap-16">
             <div className="space-y-4">
               <h4 className="font-bold text-primary text-xl">Links</h4>
@@ -33,7 +33,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-lg text-foreground/40">
           <p>© {new Date().getFullYear()} Portfolio. All rights reserved.</p>
           <p className="flex items-center gap-2">
