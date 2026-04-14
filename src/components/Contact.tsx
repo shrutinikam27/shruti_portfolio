@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle, Loader2, Linkedin, Github } from "lucide-react";
 import React, { useState } from "react";
 
 export default function Contact() {
@@ -63,8 +63,8 @@ export default function Contact() {
             </p>
 
             <div className="space-y-8">
-              <div className="flex items-center gap-6">
-                <div className="p-4 rounded-2xl bg-background border border-primary/20 text-primary shadow-[0_0_1.5rem_rgba(0,171,240,0.1)]">
+              <div className="flex items-center gap-6 group">
+                <div className="p-4 rounded-2xl bg-background border border-primary/20 text-primary group-hover:bg-primary group-hover:text-background transition-all duration-500 shadow-[0_0_1.5rem_rgba(0,171,240,0.1)]">
                   <Mail className="h-7 w-7" />
                 </div>
                 <div>
@@ -72,22 +72,49 @@ export default function Contact() {
                   <p className="text-foreground/60 text-lg">shrutisnikam95@gmail.com</p>
                 </div>
               </div>
-              <div className="flex items-center gap-6">
-                <div className="p-4 rounded-2xl bg-background border border-primary/20 text-primary shadow-[0_0_1.5rem_rgba(0,171,240,0.1)]">
+              <div className="flex items-center gap-6 group">
+                <div className="p-4 rounded-2xl bg-background border border-primary/20 text-primary group-hover:bg-primary group-hover:text-background transition-all duration-500 shadow-[0_0_1.5rem_rgba(0,171,240,0.1)]">
                   <Phone className="h-7 w-7" />
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground text-xl">Phone</h4>
-                  <p className="text-foreground/60 text-lg">7083671131</p>
+                  <p className="text-foreground/60 text-lg">+91 7083671131</p>
                 </div>
               </div>
-              <div className="flex items-center gap-6">
-                <div className="p-4 rounded-2xl bg-background border border-primary/20 text-primary shadow-[0_0_1.5rem_rgba(0,171,240,0.1)]">
+              <div className="flex items-center gap-6 group">
+                <div className="p-4 rounded-2xl bg-background border border-primary/20 text-primary group-hover:bg-primary group-hover:text-background transition-all duration-500 shadow-[0_0_1.5rem_rgba(0,171,240,0.1)]">
                   <MapPin className="h-7 w-7" />
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground text-xl">Location</h4>
                   <p className="text-foreground/60 text-lg">Satara, Maharashtra, India</p>
+                </div>
+              </div>
+
+              {/* Social Networking Block */}
+              <div className="mt-12 pt-12 border-t border-white/5">
+                <h4 className="font-black text-white text-xl uppercase tracking-[0.2rem] mb-8 italic">Social Networking</h4>
+                <div className="flex gap-6">
+                   <motion.a 
+                    whileHover={{ y: -5, scale: 1.1 }}
+                    href="https://in.linkedin.com/in/shruti-s-nikam-983062257" 
+                    target="_blank" 
+                    rel="noopener"
+                    className="flex items-center gap-4 px-6 py-4 bg-primary text-background rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-white transition-all shadow-[0_10px_20px_rgba(20,241,149,0.2)]"
+                   >
+                     <Linkedin size={20} />
+                     LinkedIn
+                   </motion.a>
+                   <motion.a 
+                    whileHover={{ y: -5, scale: 1.1 }}
+                    href="https://github.com/shrutinikam27" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 px-6 py-4 bg-secondary border border-primary/20 text-primary rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-primary/10 transition-all"
+                   >
+                     <Github size={20} />
+                     GitHub
+                   </motion.a>
                 </div>
               </div>
             </div>

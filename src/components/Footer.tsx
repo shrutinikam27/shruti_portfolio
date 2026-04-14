@@ -28,7 +28,7 @@ export default function Footer() {
               <h4 className="font-bold text-primary text-xl">Social</h4>
               <ul className="space-y-2 text-lg text-foreground/60">
                 <li><a href="https://github.com/shrutinikam27" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/shruti-s-nikam-983062257/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a></li>
+                <li><a href="https://in.linkedin.com/in/shruti-s-nikam-983062257" target="_blank" rel="noopener" className="hover:text-primary transition-colors">LinkedIn</a></li>
               </ul>
             </div>
           </div>
