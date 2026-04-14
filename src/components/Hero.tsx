@@ -42,6 +42,16 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 sm:px-[9%] pt-32 lg:pt-[100px] gap-12 lg:gap-0">
       <div className="home-content max-w-[600px]">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-primary/20 bg-primary/5 mb-8 backdrop-blur-sm group"
+        >
+          <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <span className="text-primary font-black uppercase tracking-[0.2rem] text-[1rem]">Fresher • Open to Work</span>
+        </motion.div>
+
         <motion.h3
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

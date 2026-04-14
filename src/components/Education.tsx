@@ -6,21 +6,21 @@ const educationData = [
     institution: "Dnyanshree Institute of Engineering and Technology",
     location: "Satara",
     description: "Specializing in Computer Science and Engineering with a focus on modern software development and algorithmic logic.",
-    year: "Current"
+    year: "2026 (Current)"
   },
   {
     level: "12th Standard (HSC)",
     institution: "Yashavantrao Chavan Institute of Science",
     location: "Satara",
     description: "Focused on Science stream with a strong foundation in Mathematics and Physics.",
-    year: "Completed"
+    year: "2022 (Completed)"
   },
   {
     level: "10th Standard (SSC)",
     institution: "Raghunathmal Dargaji Oswal Vidyalay",
     location: "Jamb Triputi",
     description: "Foundational education with academic excellence and participation in technical workshops.",
-    year: "Completed"
+    year: "2020 (Completed)"
   }
 ];
 
