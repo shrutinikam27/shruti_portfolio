@@ -15,7 +15,7 @@ const projects = [
     title: "Gemzi App",
     description: "A premium mobile marketing platform for luxury jewellery. Built with Flutter, it features high-fidelity catalogs and secure b-to-c gold saving schemes.",
     image: "/gemzi.png",
-    tags: ["Flutter", "Dart", "Firebase", "Mobile"],
+    tags: ["Flutter", "Dart", "Firebase", "Ongoing"],
     icon: Smartphone,
     github: "https://github.com/shrutinikam27/gemzi-flutter-app",
     demo: "#",
