@@ -74,7 +74,7 @@ export default function Hero() {
           className="flex items-center gap-6 mb-12"
         >
           <div className="w-16 h-[2px] bg-primary/40" />
-          <h3 className="text-[3rem] font-black text-foreground/90 uppercase tracking-tight italic">
+          <h3 className="text-[3rem] font-black text-foreground/90 uppercase tracking-tight">
             <span className="text-primary typing-text">{text}</span>
           </h3>
         </motion.div>

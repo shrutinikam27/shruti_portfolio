@@ -39,7 +39,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-7xl font-black text-white italic tracking-tighter uppercase leading-none"
+            className="text-7xl font-black text-white  tracking-tighter uppercase leading-none"
           >
             Technical <span className="text-primary">Toolkit</span>
           </motion.h2>
@@ -84,7 +84,7 @@ export default function Skills() {
                 <div className={`mb-8 p-5 rounded-2xl bg-primary/10 border border-primary/20 w-fit group-hover:bg-primary group-hover:text-background transition-all duration-500 ${skill.color}`}>
                   <skill.icon className="h-10 w-10" />
                 </div>
-                <h3 className="text-3xl font-black text-white italic uppercase tracking-tighter mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-3xl font-black text-white  uppercase tracking-tighter mb-4 group-hover:text-primary transition-colors">
                   {skill.name}
                 </h3>
                 <p className="text-foreground/40 text-lg font-light leading-relaxed group-hover:text-foreground/60 transition-colors">
@@ -101,7 +101,7 @@ export default function Skills() {
 
       {/* Background Decorative Text */}
       <div className="absolute bottom-0 right-0 pointer-events-none z-0">
-         <h3 className="text-[20rem] font-black italic uppercase tracking-tighter text-white/[0.02] translate-y-20 select-none">
+         <h3 className="text-[20rem] font-black  uppercase tracking-tighter text-white/[0.02] translate-y-20 select-none">
            EXPERTISE
          </h3>
       </div>

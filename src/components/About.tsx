@@ -43,8 +43,8 @@ export default function About() {
               <span className="text-primary font-black uppercase tracking-[.4rem] text-sm">Introduction</span>
             </div>
 
-            <h2 className="text-[7rem] md:text-[9rem] font-black mb-12 tracking-tighter leading-[0.9] text-white italic uppercase">
-              About <span className="text-primary italic">Me</span>
+            <h2 className="text-[7rem] md:text-[9rem] font-black mb-12 tracking-tighter leading-[0.9] text-white  uppercase">
+              About <span className="text-primary ">Me</span>
             </h2>
 
             <div className="mb-8">
@@ -74,11 +74,11 @@ export default function About() {
 
             <div className="grid grid-cols-2 gap-16 mb-16">
               <div className="flex flex-col gap-2">
-                <h4 className="text-primary font-black text-5xl italic tracking-tighter">04+</h4>
+                <h4 className="text-primary font-black text-5xl  tracking-tighter">04+</h4>
                 <p className="text-foreground/40 font-bold uppercase tracking-widest text-xs">Major Projects</p>
               </div>
               <div className="flex flex-col gap-2">
-                <h4 className="text-primary font-black text-5xl italic tracking-tighter">100%</h4>
+                <h4 className="text-primary font-black text-5xl  tracking-tighter">100%</h4>
                 <p className="text-foreground/40 font-bold uppercase tracking-widest text-xs">Quality Commitment</p>
               </div>
             </div>

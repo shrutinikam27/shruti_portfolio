@@ -56,7 +56,7 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Contact <span className="text-primary italic">Me!</span>
+              Contact <span className="text-primary ">Me!</span>
             </h2>
             <p className="text-foreground/70 text-xl mb-10 leading-relaxed">
               I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
@@ -93,7 +93,7 @@ export default function Contact() {
 
               {/* Social Networking Block */}
               <div className="mt-12 pt-12 border-t border-white/5">
-                <h4 className="font-black text-white text-xl uppercase tracking-[0.2rem] mb-8 italic">Social Networking</h4>
+                <h4 className="font-black text-white text-xl uppercase tracking-[0.2rem] mb-8 ">Social Networking</h4>
                 <div className="flex gap-6">
                    <motion.a 
                     whileHover={{ y: -5, scale: 1.1 }}

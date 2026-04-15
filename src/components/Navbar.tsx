@@ -25,7 +25,7 @@ export default function Navbar() {
           whileHover={{ scale: 1.05 }}
           className="flex-shrink-0"
         >
-          <a href="#" className="text-2xl font-black text-white tracking-tighter hover:text-primary transition-colors italic">
+          <a href="#" className="text-2xl font-black text-white tracking-tighter hover:text-primary transition-colors ">
             SHRUTI NIKAM
           </a>
         </motion.div>

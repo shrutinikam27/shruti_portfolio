@@ -19,17 +19,29 @@ const projects = [
     icon: Smartphone,
     github: "https://github.com/shrutinikam27/gemzi-flutter-app",
     demo: "#",
+    isApp: true,
   },
   {
-    title: "SnipApp",
+    title: "SnipText",
     description: "An elegant productivity tool for developers. It provides a personalized code snippet library with advanced syntax highlighting and rapid-search functionality.",
     image: "/snipapp.png",
     tags: ["React", "TypeScript", "Tailwind"],
-    icon: Code2,
+    icon: Smartphone,
     github: "https://github.com/shrutinikam27/snipapp",
     demo: "#",
+    isApp: true,
   },
 
+  {
+    title: "Infinite Era",
+    description: "An immersive language learning platform featuring interactive lessons, daily challenges, and gamified progress tracking with a vibrant, intuitive interface.",
+    image: "/lingo_real.png",
+
+    tags: ["Next.js", "TypeScript", "Drizzle", "PostgreSQL", "Clerk",],
+    icon: Globe,
+    github: "https://github.com/shrutinikam27/mini_project",
+    demo: "https://lingo-pi-roan.vercel.app/",
+  },
 ];
 
 export default function Projects() {
@@ -51,14 +63,14 @@ export default function Projects() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-7xl font-black text-white italic tracking-tighter uppercase"
+            className="text-7xl font-black text-white  tracking-tighter uppercase"
           >
             Project <span className="text-primary"> Gallery</span>
           </motion.h2>
         </div>
 
         {/* Bento Grid Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:auto-rows-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -66,19 +78,23 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className={`group relative rounded-[3rem] overflow-hidden border border-white/5 bg-secondary/20 backdrop-blur-3xl shadow-2xl flex flex-col md:flex-row ${index === 0 ? "md:col-span-12 md:row-span-2" :
-                "md:col-span-6 md:row-span-1"
-                }`}
+              className="group relative rounded-[2.5rem] overflow-hidden border border-white/5 bg-secondary/10 backdrop-blur-3xl shadow-2xl flex flex-col"
             >
-              {/* Image Part (Half) */}
-              <div className={`relative overflow-hidden flex-shrink-0 ${index === 0 ? "md:w-[60%] w-full h-[400px] md:h-full" : "w-full h-[250px] md:h-full md:w-1/2"
-                }`}>
+              <div className="relative h-[300px] overflow-hidden flex-shrink-0">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className={`w-full h-full object-cover grayscale-[50%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 opacity-80 group-hover:opacity-100 object-top`}
+                  className={`w-full h-full object-cover grayscale-[50%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 opacity-80 group-hover:opacity-100 object-top ${'mobileImage' in project ? 'hidden md:block' : ''}`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-background/40 to-transparent" />
+                {'mobileImage' in project && (
+                  <img
+                    src={project.mobileImage as string}
+                    alt={project.title}
+                    className="w-full h-full object-cover grayscale-[50%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 opacity-80 group-hover:opacity-100 object-top block md:hidden"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
 
                 {/* Floating Icon inside Image Part */}
                 <div className="absolute top-8 left-8 p-4 rounded-2xl bg-background/50 backdrop-blur-xl border border-white/10 text-primary z-20">
@@ -86,13 +102,11 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Info Part (Half) */}
-              <div className={`p-10 flex flex-col justify-center flex-grow bg-secondary/5 group-hover:bg-primary/[0.02] transition-colors duration-500 overflow-hidden ${index === 0 || index === 3 ? "md:max-w-[40%]" : ""
-                }`}>
+              <div className="p-8 flex flex-col flex-grow bg-secondary/5 group-hover:bg-primary/[0.01] transition-colors duration-500">
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map(tag => (
-                      <span key={tag} className="text-[0.65rem] font-black uppercase tracking-widest text-primary/60 group-hover:text-primary transition-colors">
+                      <span key={tag} className="text-[0.6rem] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-white/5 text-foreground/50 border border-white/5 group-hover:border-primary/20 group-hover:text-primary transition-all">
                         {tag}
                       </span>
                     ))}
@@ -107,25 +121,28 @@ export default function Projects() {
                     >
                       <Github size={24} />
                     </motion.a>
-                    {project.demo !== "#" && (
+                    {(project.demo !== "#" || ('isApp' in project && project.isApp)) && (
                       <motion.a
-                        whileHover={{ scale: 1.1, y: -2 }}
-                        whileTap={{ scale: 0.9 }}
+                        whileHover={project.demo !== "#" ? { scale: 1.1, y: -2 } : {}}
+                        whileTap={project.demo !== "#" ? { scale: 0.9 } : {}}
                         href={project.demo}
                         target="_blank"
-                        className="text-foreground/60 hover:text-primary transition-all p-2 bg-white/5 rounded-lg active:bg-primary/20"
+                        className={`transition-all p-2 rounded-lg ${project.demo !== "#"
+                          ? "text-foreground/60 hover:text-primary bg-white/5 active:bg-primary/20"
+                          : "text-foreground/20 cursor-default bg-transparent"
+                          }`}
                       >
-                        <ExternalLink size={24} />
+                        {'isApp' in project && project.isApp ? <Smartphone size={24} /> : <ExternalLink size={24} />}
                       </motion.a>
                     )}
                   </div>
                 </div>
 
                 <div className="mt-4">
-                  <h3 className="text-4xl font-black text-white italic tracking-tighter uppercase mb-4 group-hover:text-primary transition-all duration-500">
+                  <h3 className="text-3xl font-bold text-white tracking-tight uppercase mb-3 group-hover:text-primary transition-all duration-500">
                     {project.title}
                   </h3>
-                  <p className="text-xl text-foreground/40 font-light leading-relaxed line-clamp-4 group-hover:text-foreground/70 transition-colors">
+                  <p className="text-base text-foreground/50 font-medium leading-relaxed line-clamp-3 group-hover:text-foreground/80 transition-colors">
                     {project.description}
                   </p>
                 </div>
@@ -156,7 +173,7 @@ export default function Projects() {
           <div className="absolute inset-0 bg-primary/5 blur-[120px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
 
           <p className="text-primary font-black uppercase tracking-[1rem] mb-6">Deep Dive</p>
-          <h3 className="text-8xl md:text-[12rem] font-black text-white italic uppercase tracking-tighter mb-12 opacity-10 group-hover:opacity-20 transition-opacity select-none leading-none">
+          <h3 className="text-8xl md:text-[12rem] font-black text-white uppercase tracking-tighter mb-12 opacity-10 group-hover:opacity-20 transition-opacity select-none leading-none">
             REPOSITORIES
           </h3>
 

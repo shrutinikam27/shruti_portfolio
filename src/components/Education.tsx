@@ -46,9 +46,9 @@ export default function Education() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-5xl md:text-6xl lg:text-[4.8rem] font-black text-white italic tracking-tight uppercase leading-tight font-['Times_New_Roman',_serif]"
+                className="text-5xl md:text-6xl lg:text-[4.8rem] font-black text-white  tracking-tight uppercase leading-tight font-['Times_New_Roman',_serif]"
               >
-                Academic <br /> <span className="text-primary italic">Timeline</span>
+                Academic <br /> <span className="text-primary ">Timeline</span>
               </motion.h2>
               <p className="mt-12 text-xl text-foreground/40 font-light leading-relaxed max-w-sm">
                 A journey of technical growth and academic excellence across leading institutions.
@@ -75,15 +75,15 @@ export default function Education() {
 
                 <div className="p-12 rounded-[3.5rem] bg-secondary/20 border border-white/5 backdrop-blur-3xl group-hover:border-primary/20 transition-all duration-500 relative overflow-hidden">
                   {/* Background Index */}
-                  <span className="absolute -top-10 -right-10 text-[12rem] font-black text-white/[0.02] select-none italic">{index + 1}</span>
+                  <span className="absolute -top-10 -right-10 text-[12rem] font-black text-white/[0.02] select-none ">{index + 1}</span>
 
                   <div className="relative z-10">
                     <div className="flex justify-between items-start mb-6">
                       <span className="text-primary font-black uppercase tracking-[0.3rem] text-sm font-mono">{edu.year}</span>
-                      <span className="text-white/20 font-black italic text-2xl uppercase font-mono">#Level_{3 - index}</span>
+                      <span className="text-white/20 font-black  text-2xl uppercase font-mono">#Level_{3 - index}</span>
                     </div>
 
-                    <h3 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter uppercase mb-2 font-['Times_New_Roman',_serif]">
+                    <h3 className="text-4xl md:text-5xl font-black text-white  tracking-tighter uppercase mb-2 font-['Times_New_Roman',_serif]">
                       {edu.level}
                     </h3>
                     <h4 className="text-xl md:text-2xl font-bold text-primary mb-6">
