@@ -18,7 +18,7 @@ const projects = [
     tags: ["Flutter", "Dart", "Firebase", "Ongoing"],
     icon: Smartphone,
     github: "https://github.com/shrutinikam27/gemzi-flutter-app",
-    demo: "#",
+    demo: "https://gemzi-flutter-app.vercel.app/",
     isApp: true,
   },
   {
@@ -28,7 +28,7 @@ const projects = [
     tags: ["React", "TypeScript", "Tailwind"],
     icon: Smartphone,
     github: "https://github.com/shrutinikam27/snipapp",
-    demo: "#",
+    demo: "https://snipapp-nine.vercel.app/",
     isApp: true,
   },
 
