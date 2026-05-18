@@ -3,6 +3,15 @@ import { Github, ExternalLink, Code2, Globe, Database, Smartphone } from "lucide
 
 const projects = [
   {
+    title: "SafeLink",
+    description: "A hyper-responsive smart city safety and emergency response ecosystem developed during a high-stakes hackathon. It bridges the gap between citizens, community first-responders, and municipal services using low-latency WebSockets, interactive GIS maps, and dynamic portals.",
+    image: "/safelink.png",
+    tags: ["Hackathon", "React", "Node.js", "Socket.io", "Firebase"],
+    icon: Globe,
+    github: "https://github.com/shrutinikam27/catalyst-crew",
+    demo: "https://safelink-steel.vercel.app/",
+  },
+  {
     title: "StreetVend",
     description: "A comprehensive business management ecosystem for street vendors. This platform integrates real-time inventory tracking, supplier connection modules, and sales analytics to empower micro-entrepreneurs.",
     image: "/streetvendor.png",
@@ -78,9 +87,13 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="group relative rounded-[2.5rem] overflow-hidden border border-white/5 bg-secondary/10 backdrop-blur-3xl shadow-2xl flex flex-col"
+              className={`group relative rounded-[2.5rem] overflow-hidden border border-white/5 bg-secondary/10 backdrop-blur-3xl shadow-2xl flex flex-col ${index === 0 ? "md:col-span-2 md:flex-row" : ""
+                }`}
             >
-              <div className="relative h-[300px] overflow-hidden flex-shrink-0">
+              <div
+                className={`relative h-[300px] overflow-hidden flex-shrink-0 ${index === 0 ? "md:h-auto md:w-1/2 min-h-[350px]" : ""
+                  }`}
+              >
                 <img
                   src={project.image}
                   alt={project.title}
@@ -102,7 +115,8 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="p-8 flex flex-col flex-grow bg-secondary/5 group-hover:bg-primary/[0.01] transition-colors duration-500">
+              <div className={`p-8 flex flex-col flex-grow bg-secondary/5 group-hover:bg-primary/[0.01] transition-colors duration-500 ${index === 0 ? "md:w-1/2 justify-center" : ""
+                }`}>
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map(tag => (
@@ -173,7 +187,7 @@ export default function Projects() {
           <div className="absolute inset-0 bg-primary/5 blur-[120px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
 
           <p className="text-primary font-black uppercase tracking-[1rem] mb-6">Deep Dive</p>
-          <h3 className="text-8xl md:text-[12rem] font-black text-white uppercase tracking-tighter mb-12 opacity-10 group-hover:opacity-20 transition-opacity select-none leading-none">
+          <h3 className="text-6xl md:text-[8rem] font-black text-white uppercase tracking-tighter mb-12 opacity-10 group-hover:opacity-20 transition-opacity select-none leading-none">
             REPOSITORIES
           </h3>
 

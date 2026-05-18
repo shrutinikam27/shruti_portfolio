@@ -5,6 +5,7 @@ import Education from "@/components/Education";
 import Services from "@/components/Services";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingShapes from "@/components/FloatingShapes";
@@ -42,6 +43,7 @@ export default function App() {
         <Services />
         <Skills />
         <Projects />
+        <Certifications />
         <Contact />
       </main>
       
