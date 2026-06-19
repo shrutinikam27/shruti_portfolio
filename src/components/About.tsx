@@ -19,7 +19,7 @@ export default function About() {
               <img
                 src="/profile.png"
                 alt="About Shruti"
-                className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000 scale-100 group-hover:scale-105"
+                className="w-full h-auto grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-1000 scale-100 group-hover:scale-105"
               />
             </div>
             {/* Decorative Geometric Elements */}
