@@ -6,7 +6,7 @@ const educationData = [
     institution: "Dnyanshree Institute of Engineering and Technology",
     location: "Satara",
     description: "Specializing in Computer Science and Engineering with a focus on modern software development and algorithmic logic.",
-    year: "2026 (Current)"
+    year: "2026 (Completed)"
   },
   {
     level: "12th Standard (HSC)",

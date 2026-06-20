@@ -9,7 +9,7 @@ export default function Hero() {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
-    "B.Tech Student",
+    "B.Tech Graduate",
     "Problem Solver",
     "MERN Stack Developer",
     "App Developer"

@@ -16,6 +16,27 @@
   --color-secondary-foreground: #ededed;
 
   --color-accent: #00ffcc;
+
+  --animate-marquee-left: marquee-left 35s linear infinite;
+  --animate-marquee-right: marquee-right 35s linear infinite;
+
+  @keyframes marquee-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 }
 
 @layer base {
@@ -64,7 +85,6 @@
   }
 
   section {
-    min-height: 100vh;
     padding: 10rem 9% 2rem;
     position: relative;
     z-index: 1;
@@ -73,6 +93,18 @@
   .outline-text {
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.mask-gradient {
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+@media (min-width: 640px) {
+  .mask-gradient {
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
   }
 }
 

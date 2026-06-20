@@ -54,7 +54,7 @@ export default function About() {
             </div>
 
             <p className="text-2xl text-foreground/50 leading-relaxed font-light mb-12 max-w-xl">
-              I'm a dedicated B.Tech student and versatile digital creator who thrives at the intersection of complex problem solving and elegant user interfaces.
+              I'm a dedicated B.Tech graduate and versatile digital creator who thrives at the intersection of complex problem solving and elegant user interfaces.
             </p>
 
             <AnimatePresence>

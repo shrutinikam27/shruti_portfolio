@@ -4,11 +4,13 @@ import About from "@/components/About";
 import Education from "@/components/Education";
 import Services from "@/components/Services";
 import Skills from "@/components/Skills";
+import Technologies from "@/components/Technologies";
 import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingShapes from "@/components/FloatingShapes";
+import GlitterBackground from "@/components/GlitterBackground";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollToTop from "@/components/ScrollToTop";
 import { motion, useScroll, useSpring } from "motion/react";
@@ -33,6 +35,7 @@ export default function App() {
       />
       
       <FloatingShapes />
+      <GlitterBackground />
       
       <Navbar />
       
@@ -42,6 +45,7 @@ export default function App() {
         <Education />
         <Services />
         <Skills />
+        <Technologies />
         <Projects />
         <Certifications />
         <Contact />
